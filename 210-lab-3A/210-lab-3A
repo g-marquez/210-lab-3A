@@ -7,8 +7,6 @@
 #include <iostream>
 using namespace std;
 
-Restaurant populateRestaurant();
-
 struct Restaurant
 {
     string name;
@@ -18,8 +16,13 @@ struct Restaurant
     int stars;
 };
 
+Restaurant populateRestaurant(); 
+
 int main()
 {
+    //demonstrate with a single struct using console input
+    Restaurant myRest = populateRestaurant();
+    
     return 0;
 }
 
@@ -36,4 +39,9 @@ Restaurant populateRestaurant()
     getline(cin, temp.address);
     cout << "Enter restaurant capacity: ";
     cin >> temp.capacity;
+    cout << "Enter the restaurant square footage: ";
+    cin >> temp.sq_feet;
+    cout << "Enter how many stars the restaurant has: ";
+    cin >> temp.stars;
+    return temp;
 }
