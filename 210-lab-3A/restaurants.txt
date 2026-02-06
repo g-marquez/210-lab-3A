@@ -1,0 +1,20 @@
+McDonald's
+893 West Cliff
+100
+700.5
+3
+Cheescake Factory
+737 Main St
+300
+1157.8
+4
+Fancy's
+101 Fancy St
+350
+1500.5
+5
+Bob's Burgers
+234 East Way
+60
+700.0
+2
