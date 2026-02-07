@@ -13,10 +13,11 @@ struct Restaurant
     string address;
     int capacity;
     double sq_feet;
-    int stars;
+    char franchise;
 };
 
-Restaurant populateRestaurant(); 
+Restaurant populateRestaurant();
+void outputRestaurant(const Restaurant &); 
 
 int main()
 {
@@ -41,7 +42,16 @@ Restaurant populateRestaurant()
     cin >> temp.capacity;
     cout << "Enter the restaurant square footage: ";
     cin >> temp.sq_feet;
-    cout << "Enter how many stars the restaurant has: ";
+    cout << "Is this restaurant a franchise? (Y/N):  ";
     cin >> temp.stars;
     return temp;
+}
+
+// outputRestaurant() receives a struct object and outputs its data in a
+// presentable format
+// arguments: a struct object r
+// returns: n/a
+void outputRestaurant(const Restaurant &r)
+{
+    cout << "Restaurant Name: " << r.name
 }
