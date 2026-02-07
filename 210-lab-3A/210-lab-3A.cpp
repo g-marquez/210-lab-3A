@@ -5,7 +5,10 @@
 //*****************************************************************************
 
 #include <iostream>
+#include <fstream>
 using namespace std;
+
+int NUM_RESTAURANTS = 4;
 
 struct Restaurant
 {
@@ -24,6 +27,10 @@ int main()
     //demonstrate with a single struct using console input
     Restaurant myRest = populateRestaurant();
     outputRestaurant(myRest);
+    cout << endl << endl;
+
+    //demonstrate with multiple structs using file input
+    Restaurant restaurantLog[NUM_RESTAURANTS];
     
     return 0;
 }
@@ -67,5 +74,8 @@ void outputRestaurant(const Restaurant &r)
     cout << "Address: " << r.address << endl;
     cout << "Capacity: " << r.capacity << endl;
     cout << "Square-Footage: " << r.sq_feet << endl;
-    cout << "Franchise: " << r.franchise ? cout << "yes" : cout << "no" << endl;
+    cout << "Franchise: "; 
+    if (r.franchise) 
+        cout << "yes"; 
+    else cout << "no" << endl << endl;
 }
