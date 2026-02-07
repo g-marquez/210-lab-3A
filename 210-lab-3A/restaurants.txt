@@ -2,19 +2,19 @@ McDonald's
 893 West Cliff
 100
 700.5
-3
+Y
 Cheescake Factory
 737 Main St
 300
 1157.8
-4
+Y
 Fancy's
 101 Fancy St
 350
 1500.5
-5
+N
 Bob's Burgers
 234 East Way
 60
 700.0
-2
+N

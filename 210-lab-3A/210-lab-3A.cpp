@@ -13,7 +13,7 @@ struct Restaurant
     string address;
     int capacity;
     double sq_feet;
-    char franchise;
+    bool franchise;
 };
 
 Restaurant populateRestaurant();
@@ -43,7 +43,16 @@ Restaurant populateRestaurant()
     cout << "Enter the restaurant square footage: ";
     cin >> temp.sq_feet;
     cout << "Is this restaurant a franchise? (Y/N):  ";
-    cin >> temp.stars;
+    char entry;
+    cin >> entry;
+    entry = toupper(entry);
+    while (entry != 'Y' and entry != 'N')
+    {
+        cout << "ERROR: Y/N only - try again: ";
+        cin >> entry;
+        entry = toupper(entry);
+    }
+    temp.franchise = entry == 'Y' ? true : false;
     return temp;
 }
 
