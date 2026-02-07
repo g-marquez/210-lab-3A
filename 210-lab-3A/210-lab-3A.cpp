@@ -27,7 +27,7 @@ int main()
     //demonstrate with a single struct using console input
     Restaurant myRest = populateRestaurant();
     outputRestaurant(myRest);
-    cout << endl << endl;
+    cout << endl << endl << endl;
 
     //demonstrate with multiple structs using file input
     Restaurant restaurantLog[NUM_RESTAURANTS];
@@ -39,8 +39,9 @@ int main()
     int index = 0;
 
     //read data from file and add struct elements to array
-    while (getline(fin, in_name))
+    while (fin >> in_name)
     {
+        fin.ignore();
         getline(fin, in_address);
         fin >> in_capacity;
         fin >> in_sq_feet;
@@ -63,6 +64,7 @@ int main()
     {
         cout << "Restaurant #" << i + 1 << ":\n";
         outputRestaurant(restaurantLog[i]);
+        cout << endl << endl;
     }
 
     fin.close();
@@ -96,6 +98,7 @@ Restaurant populateRestaurant()
         entry = toupper(entry);
     }
     temp.franchise = entry == 'Y' ? true : false;
+    cout << endl;
     return temp;
 }
 
