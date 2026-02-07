@@ -39,10 +39,33 @@ int main()
     int index = 0;
 
     //read data from file and add struct elements to array
-    while (fin >> in_name)
+    while (getline(fin, in_name))
     {
-        
+        getline(fin, in_address);
+        fin >> in_capacity;
+        fin >> in_sq_feet;
+        fin >> in_franchise;
+        fin.ignore();
+
+        Restaurant temp;
+        temp.name = in_name;
+        temp.address = in_address;
+        temp.capacity = in_capacity;
+        temp.sq_feet = in_sq_feet;
+        if (in_franchise == 'Y') temp.franchise = true;
+        else temp.franchise = false;
+        restaurantLog[index++] = temp;
     }
+
+    //output restaurant log using for loop
+    cout << "Outputting restaurant log: " << endl;
+    for (int i = 0; i < NUM_RESTAURANTS; ++i)
+    {
+        cout << "Restaurant #" << i + 1 << ":\n";
+        outputRestaurant(restaurantLog[i]);
+    }
+
+    fin.close();
     
     return 0;
 }
