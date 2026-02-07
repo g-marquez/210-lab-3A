@@ -31,6 +31,18 @@ int main()
 
     //demonstrate with multiple structs using file input
     Restaurant restaurantLog[NUM_RESTAURANTS];
+    ifstream fin("restaurant.txt");
+    string in_name, in_address;
+    int in_capacity;
+    double in_sq_feet;
+    char in_franchise;
+    int index = 0;
+
+    //read data from file and add struct elements to array
+    while (fin >> in_name)
+    {
+        
+    }
     
     return 0;
 }
@@ -75,7 +87,6 @@ void outputRestaurant(const Restaurant &r)
     cout << "Capacity: " << r.capacity << endl;
     cout << "Square-Footage: " << r.sq_feet << endl;
     cout << "Franchise: "; 
-    if (r.franchise) 
-        cout << "yes"; 
+    if (r.franchise) cout << "yes"; 
     else cout << "no" << endl << endl;
 }
