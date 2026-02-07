@@ -23,6 +23,7 @@ int main()
 {
     //demonstrate with a single struct using console input
     Restaurant myRest = populateRestaurant();
+    outputRestaurant(myRest);
     
     return 0;
 }
@@ -62,5 +63,9 @@ Restaurant populateRestaurant()
 // returns: n/a
 void outputRestaurant(const Restaurant &r)
 {
-    cout << "Restaurant Name: " << r.name
+    cout << "Restaurant Name: " << r.name << endl;
+    cout << "Address: " << r.address << endl;
+    cout << "Capacity: " << r.capacity << endl;
+    cout << "Square-Footage: " << r.sq_feet << endl;
+    cout << "Franchise: " << r.franchise ? cout << "yes" : cout << "no" << endl;
 }
