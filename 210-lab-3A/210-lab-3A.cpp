@@ -21,7 +21,7 @@ Restaurant populateRestaurant();
 int main()
 {
     //demonstrate with a single struct using console input
-    Restaurant myRest = populateRestaurant(); //confirmed works
+    Restaurant myRest = populateRestaurant();
     
     return 0;
 }
