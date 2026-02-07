@@ -39,9 +39,8 @@ int main()
     int index = 0;
 
     //read data from file and add struct elements to array
-    while (fin >> in_name)
+    while (getline(fin, in_name))
     {
-        fin.ignore();
         getline(fin, in_address);
         fin >> in_capacity;
         fin >> in_sq_feet;
@@ -55,7 +54,8 @@ int main()
         temp.sq_feet = in_sq_feet;
         if (in_franchise == 'Y') temp.franchise = true;
         else temp.franchise = false;
-        restaurantLog[index++] = temp;
+        restaurantLog[index] = temp;
+        index++;
     }
 
     //output restaurant log using for loop
