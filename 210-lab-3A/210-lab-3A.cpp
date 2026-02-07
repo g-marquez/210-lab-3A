@@ -1,5 +1,5 @@
 //*****************************************************************************
-// COMSC-210 | Lab 3 | Gabriel Marquez
+// COMSC-210 | Lab 3A | Gabriel Marquez
 // Description: this program manipulates data about restaurants and leverages
 // struct variables.
 //*****************************************************************************
@@ -39,7 +39,6 @@ int main()
     int index = 0;
 
     //read data from file and add struct elements to array
-    //something down here isn't working
     while (getline(fin, in_name))
     {
         getline(fin, in_address);
@@ -48,6 +47,7 @@ int main()
         fin >> in_franchise;
         fin.ignore();
 
+        //create a temp Restaurant object to pass file input into members + array
         Restaurant temp;
         temp.name = in_name;
         temp.address = in_address;
@@ -59,7 +59,7 @@ int main()
         index++;
     }
 
-    //output restaurant log using for loop
+    //output restaurant log with formatting
     cout << "Outputting restaurant log: " << endl;
     for (int i = 0; i < NUM_RESTAURANTS; ++i)
     {
