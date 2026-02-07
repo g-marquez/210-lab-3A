@@ -39,6 +39,7 @@ int main()
     int index = 0;
 
     //read data from file and add struct elements to array
+    //something down here isn't working
     while (getline(fin, in_name))
     {
         getline(fin, in_address);
