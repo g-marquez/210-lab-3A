@@ -32,6 +32,11 @@ int main()
     //demonstrate with multiple structs using file input
     Restaurant restaurantLog[NUM_RESTAURANTS];
     ifstream fin("restaurants.txt");
+    if (!fin.is_open())
+    {
+        cout << "ERROR! Please verify file name and directory.";
+        return 1;
+    }
     string in_name, in_address;
     int in_capacity;
     double in_sq_feet;
