@@ -31,7 +31,7 @@ int main()
 
     //demonstrate with multiple structs using file input
     Restaurant restaurantLog[NUM_RESTAURANTS];
-    ifstream fin("restaurant.txt");
+    ifstream fin("restaurants.txt");
     string in_name, in_address;
     int in_capacity;
     double in_sq_feet;

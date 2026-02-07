@@ -7,7 +7,7 @@ Cheescake Factory
 737 Main St
 300
 1157.8
-Y
+N
 Fancy's
 101 Fancy St
 350
